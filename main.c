@@ -2,7 +2,14 @@
 #include <stdio.h>
 
 int main(){
-int opcao;
+ListaDeTarefas lt;
+char arquivo[]="tarefas";
+int opcao, codigo;
+codigo=carregarTarefas(&lt, arquivo);
+if(codigo!=0){
+    printf("Lista de tarefas nao carregada");
+    lt.qtd=0;
+}
 
 do{
     exibeMenu();
