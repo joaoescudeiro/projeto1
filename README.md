@@ -1,8 +1,11 @@
 git init
+
 git remote add origin https://github.com/joaoescudeiro/projeto1.git
+
 git add .
 
 git branch
+
 git log
 
 git add .
