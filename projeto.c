@@ -21,8 +21,23 @@ int criarTarefa(ListaDeTarefas *lt){
 }
 
 int deletarTarefa(ListaDeTarefas *lt){
-    printf("Deletar Tarefa\n");
+    if(lt->qtd == 0)
+    return 1;
+
+    int pos;
+    printf("Entre com a posicao que deseja deletar:");
+    scanf("%d", &pos);
+
+    if(pos<0 || pos > lt->qtd-1)
+    return 2;
+
+for(;pos<lt->qtd-1;pos++){
+    lt->tarefas[pos].prioridade = lt->tarefas[pos+1].prioridade;
+    strcpy(lt->tarefas[pos].descricao,lt -> tarefas[pos+1].descricao);
+    strcpy(lt->tarefas[pos].categoria,lt -> tarefas[pos+1].categoria);
+    lt->qtd--;
     return 0;
+}
 }
 
 int listarTarefas(ListaDeTarefas *lt){
