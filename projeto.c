@@ -41,18 +41,42 @@ for(;pos<lt->qtd-1;pos++){
 }
 
 int listarTarefas(ListaDeTarefas *lt){
-    printf("Listar Tarefa\n");
+    if(lt->qtd==0)
+    return 1;
+
+    int i;
+
+    for(i=0;i<lt->qtd;i++){
+        printf("Pos: %d\t Prioridade: %d\t Categoria: %s\n", i, lt->tarefas[i].prioridade, lt->tarefas[i].categoria);
+        printf("Descricao: %s\n", lt->tarefas[i].descricao);
+    }
     return 0;
 }
 
 int carregarTarefas(ListaDeTarefas *lt, char *nome){
+    FILE *fp=fopen(nome, "rb");
+    if(fp == NULL)
+    return 1;
+
+    fread(lt, sizeof(ListaDeTarefas),1,fp);
+    fclose(fp);
     return 0;
 }
 
 int salvarTarefas(ListaDeTarefas *lt, char *nome){
+    FILE *fp=fopen(nome, "wb");
+    if(fp == NULL)
+    return 1;
+
+    fwrite(lt, sizeof(ListaDeTarefas),1,fp);
+    fclose(fp);
     return 0;
 }
 
 void exibeMenu(){
     printf("Menu\n");
+    printf("1. Criar tarefa\n");
+    printf("2. Deletar tarefa\n");
+    printf("3. Listar tarefa\n");
+    printf("4. Sair\n");
 }
