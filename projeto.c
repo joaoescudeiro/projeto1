@@ -83,3 +83,4 @@ void exibeMenu(){
 }
 
 int a;
+int b;
