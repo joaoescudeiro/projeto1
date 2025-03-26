@@ -24,6 +24,11 @@ int deletarTarefa(ListaDeTarefas *lt){
     if(lt->qtd == 0)
     return 1;
 
+    int a;
+    int b;
+    int c;
+    int d;
+
     int pos;
     printf("Entre com a posicao que deseja deletar:");
     scanf("%d", &pos);
