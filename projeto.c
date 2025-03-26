@@ -81,3 +81,5 @@ void exibeMenu(){
     printf("3. Listar tarefa\n");
     printf("4. Sair\n");
 }
+
+int a;
