@@ -36,10 +36,17 @@ do{
             printf("Erro ao listar tarefas: nao existem tarefas para serem listadas.\n");
         }
         else{
-            print("Opcao invalida.\n");
+            printf("Opcao invalida.\n");
         }
     }
+    else if(opcao == 4){
+        printf("A");
+        return 0;
+        
+    }
     else {printf("Opcao invalida\n");}
+}
+    
 }while(opcao!=0);
-
+return 0;
 }

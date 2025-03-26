@@ -1,5 +1,6 @@
 #include "projeto.h"
 #include <stdio.h>
+#include <string.h>
 
 int criarTarefa(ListaDeTarefas *lt){
     if(lt->qtd >= TOTAL_TAREFAS)
@@ -23,11 +24,6 @@ int criarTarefa(ListaDeTarefas *lt){
 int deletarTarefa(ListaDeTarefas *lt){
     if(lt->qtd == 0)
     return 1;
-
-    int a;
-    int b;
-    int c;
-    int d;
 
     int pos;
     printf("Entre com a posicao que deseja deletar:");
