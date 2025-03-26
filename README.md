@@ -21,3 +21,5 @@ João Vitor Alves Escudeiro 242240109
 - Foi corrigido um bug na funcao de login
 - Adicionado a funcao de calcular media
 - Teste de update readme
+
+Foram corrigidos os erros
